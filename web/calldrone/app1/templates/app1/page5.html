@@ -1,0 +1,54 @@
+{% extends './base.html' %}
+
+<!-- header -->
+{% block header %}
+{% endblock %}
+
+<!-- main -->
+{% block content %}
+<a href="/app1/page1"><img src="/static/app1/css/images/Map/Map_Small.png" style="position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; top: 15px;"></a>
+
+<div style="text-align : center; color: aliceblue; height: 50px;">
+</div>
+
+<form action="/app1/page5" method="post">
+    {% csrf_token %}
+    <div style="box-shadow: 1px 1px 1px 1px rgba(57, 53, 112, 0.2); margin-left: 50px; border-radius: 30px;
+    margin-top:10px; margin-right: 50px; text-align : center; background: linear-gradient(#2e3e4e, rgb(28, 10, 39)); padding: 10px;">
+
+        <div style="color:rgb(255, 255, 255);margin: 10px;">
+            <!-- value="on" checked="checked" -->
+            <input onclick="document.querySelector('#payload').innerText = '3시간 걸려!';" type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="off">
+            <label for="name">F450<br></label>
+            <img src="/static/app1/css/images/drone1.png" width="60" height="60" style="border-radius: 10px;">
+        </div>
+
+        <div style="color:rgb(255, 255, 255); margin: 10px;">
+            <input onclick="document.querySelector('#payload').innerText = '4시간 걸려!';" type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="off">
+            <label for="email">X500 V2<br></label>
+            <img src="/static/app1/css/images/drone2.png" width="60" height="60" style="border-radius: 10px;">
+        </div>
+
+        <div style="color:rgb(255, 255, 255); margin: 10px;">
+            <input onclick="document.querySelector('#payload').innerText = '5시간 걸려!';" type="radio" name="radio-choice-v-2" id="radio-choice-v-2c" value="other">
+            <label for="email">IRON-MAN<br></label>
+            <img src="/static/app1/css/images/drone3.png" width="60" height="60" style="border-radius: 10px;">
+        </div>
+    </div>
+    
+    <!-- <img style="position:absolute; left:277px; top: 400px;" src="/static/app1/css/images/load-34.gif" width="70" height="70"> -->
+    <div style=" position: relative; box-shadow: 1px 1px 1px 1px rgba(0.1, 0.1, 0.1, 0.2); margin-left: 50px; margin-right: 50px; border-radius: 30px;
+    margin-top:10px; text-align : center; background: linear-gradient(#2e3e4e, rgb(28, 10, 39));">
+        <div style="color:rgb(107, 9, 236); margin: 20px; padding: 20px;">
+            <p>
+                <label for="name"><h2>도착 예정 시간</h2></label>
+                <h4 id="payload" style="color:rgb(156, 129, 190)"> 드론을 선택해 주세요 </h4>
+            </p>
+            <br>
+            <button onclick = "alert('배송을 시작합니다');" type="submit" style="border-style:solid; border-width:0px; box-shadow: none; font-family:fantasy; width: 150px; height: 50px; color: #fff; background:rgb(75, 43, 161); border-radius:10px; padding:5px 20px;"><h4>선택하기</h4></button>
+        </div>
+    </div>
+</form>
+{% endblock %}
+
+<!-- footer -->

@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'app1/css/jquery.mobile-1.4.5.min.css' %}" />
+        <!-- <script src="{% static 'app1/js/jquery-1.11.1.min.js' %}"></script> -->
+        <!-- <script src="{% static 'app1/js/jquery.mobile-1.4.5.min.js' %}"></script> -->
+        <link rel="stylesheet" href="{% static 'app1/css/style.css' %}">
+        <title>calldrone</title>
+    </head>
+    <body style="background-color: #28333F;">
+
+    <header>
+        {% block header %}
+        {% endblock %}
+    </header>
+
+
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+
+    <footer>
+        <img src="/static/app1/css/images/Home/Home_Bottom Navigation.png" style="position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; top: 560px;">
+        <div style="position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; text-align: center; top: 585px;">
+            <a href="/app1/page1"><img src="/static/app1/css/images/Home/Home_Home.png" style="margin-left: 10px; margin-right: 10px;"></a>
+            <a href="/app1/page2"><img src="/static/app1/css/images/Home/Home_Routing.png" style="margin-left: 10px; margin-right: 10px;"></a>
+            <a href="/app1/page3"><img src="/static/app1/css/images/Home/Home_Sms Notification.png" style="margin-left: 10px; margin-right: 10px;"></a>
+            <a href="/app1/page4"><img src="/static/app1/css/images/Home/Home_User.png" style="margin-left: 10px; margin-right: 10px;"></a>
+        </div>
+    </footer>
+
+    </body>
+</html>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fddbb98b1c8bf19ba082003e2b48346e"></script>
